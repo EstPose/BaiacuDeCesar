@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package code;
+package BaiacuDeCesar.code;
+
+import static java.awt.Frame.MAXIMIZED_BOTH;
 
 /**
  *
@@ -15,6 +17,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -27,100 +30,113 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         panPrincipal = new javax.swing.JPanel();
+        lblBlowfish = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
-        panlateral1 = new javax.swing.JPanel();
-        panLateral2 = new javax.swing.JPanel();
-        btnJogar = new javax.swing.JButton();
+        panLateral = new javax.swing.JPanel();
         btnSair = new javax.swing.JButton();
+        btnJogar = new javax.swing.JButton();
+        panBaixo = new javax.swing.JPanel();
+        panTopo = new javax.swing.JPanel();
         MenuBar = new javax.swing.JMenuBar();
         mbLogin = new javax.swing.JMenu();
         mbRanking = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         panPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
+        lblBlowfish.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblBlowfish.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/caiabu.jpg"))); // NOI18N
+
         lblTitulo.setFont(new java.awt.Font("Liberation Serif", 3, 48)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/caiabu.jpg"))); // NOI18N
-        lblTitulo.setText("    Baiacu de César");
+        lblTitulo.setText("Baiacu de César");
 
-        panlateral1.setBackground(new java.awt.Color(0, 0, 0));
+        panLateral.setBackground(new java.awt.Color(0, 0, 0));
 
-        javax.swing.GroupLayout panlateral1Layout = new javax.swing.GroupLayout(panlateral1);
-        panlateral1.setLayout(panlateral1Layout);
-        panlateral1Layout.setHorizontalGroup(
-            panlateral1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 259, Short.MAX_VALUE)
+        javax.swing.GroupLayout panLateralLayout = new javax.swing.GroupLayout(panLateral);
+        panLateral.setLayout(panLateralLayout);
+        panLateralLayout.setHorizontalGroup(
+            panLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 55, Short.MAX_VALUE)
         );
-        panlateral1Layout.setVerticalGroup(
-            panlateral1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panLateralLayout.setVerticalGroup(
+            panLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        panLateral2.setBackground(new java.awt.Color(0, 0, 0));
-
-        javax.swing.GroupLayout panLateral2Layout = new javax.swing.GroupLayout(panLateral2);
-        panLateral2.setLayout(panLateral2Layout);
-        panLateral2Layout.setHorizontalGroup(
-            panLateral2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-        );
-        panLateral2Layout.setVerticalGroup(
-            panLateral2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 352, Short.MAX_VALUE)
-        );
-
-        btnJogar.setBackground(new java.awt.Color(0, 0, 0));
-        btnJogar.setFont(new java.awt.Font("Liberation Serif", 0, 24)); // NOI18N
-        btnJogar.setForeground(new java.awt.Color(255, 255, 255));
-        btnJogar.setText("Jogar");
-        btnJogar.setFocusable(false);
-
         btnSair.setBackground(new java.awt.Color(0, 0, 0));
-        btnSair.setFont(new java.awt.Font("Liberation Serif", 0, 24)); // NOI18N
+        btnSair.setFont(new java.awt.Font("Liberation Serif", 0, 36)); // NOI18N
         btnSair.setForeground(new java.awt.Color(255, 255, 255));
         btnSair.setText("Sair");
-        btnSair.setFocusable(false);
-        btnSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSairActionPerformed(evt);
-            }
-        });
+
+        btnJogar.setBackground(new java.awt.Color(0, 0, 0));
+        btnJogar.setFont(new java.awt.Font("Liberation Serif", 0, 36)); // NOI18N
+        btnJogar.setForeground(new java.awt.Color(255, 255, 255));
+        btnJogar.setText("Jogar");
+
+        panBaixo.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout panBaixoLayout = new javax.swing.GroupLayout(panBaixo);
+        panBaixo.setLayout(panBaixoLayout);
+        panBaixoLayout.setHorizontalGroup(
+            panBaixoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panBaixoLayout.setVerticalGroup(
+            panBaixoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 393, Short.MAX_VALUE)
+        );
+
+        panTopo.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout panTopoLayout = new javax.swing.GroupLayout(panTopo);
+        panTopo.setLayout(panTopoLayout);
+        panTopoLayout.setHorizontalGroup(
+            panTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panTopoLayout.setVerticalGroup(
+            panTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 165, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);
         panPrincipalLayout.setHorizontalGroup(
             panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panPrincipalLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(panLateral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 844, Short.MAX_VALUE)
-                    .addGroup(panPrincipalLayout.createSequentialGroup()
-                        .addComponent(panlateral1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnJogar, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
-                            .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panLateral2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+                    .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panBaixo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnJogar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panTopo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblBlowfish, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                 .addContainerGap())
         );
         panPrincipalLayout.setVerticalGroup(
             panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panlateral1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panLateral2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblBlowfish, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panPrincipalLayout.createSequentialGroup()
-                        .addComponent(btnJogar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(29, 29, 29)
-                        .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(23, 23, 23)))
+                        .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panTopo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panBaixo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panLateral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -146,10 +162,6 @@ public class Main extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        dispose();
-    }//GEN-LAST:event_btnSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,11 +202,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuBar MenuBar;
     private javax.swing.JButton btnJogar;
     private javax.swing.JButton btnSair;
+    private javax.swing.JLabel lblBlowfish;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JMenu mbLogin;
     private javax.swing.JMenu mbRanking;
-    private javax.swing.JPanel panLateral2;
+    private javax.swing.JPanel panBaixo;
+    private javax.swing.JPanel panLateral;
     private javax.swing.JPanel panPrincipal;
-    private javax.swing.JPanel panlateral1;
+    private javax.swing.JPanel panTopo;
     // End of variables declaration//GEN-END:variables
 }
