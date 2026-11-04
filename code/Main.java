@@ -39,10 +39,10 @@ public class Main extends javax.swing.JFrame {
         panTopo = new javax.swing.JPanel();
         MenuBar = new javax.swing.JMenuBar();
         mbLogin = new javax.swing.JMenu();
-        mbRanking = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         panPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -70,11 +70,21 @@ public class Main extends javax.swing.JFrame {
         btnSair.setFont(new java.awt.Font("Liberation Serif", 0, 36)); // NOI18N
         btnSair.setForeground(new java.awt.Color(255, 255, 255));
         btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
         btnJogar.setBackground(new java.awt.Color(0, 0, 0));
         btnJogar.setFont(new java.awt.Font("Liberation Serif", 0, 36)); // NOI18N
         btnJogar.setForeground(new java.awt.Color(255, 255, 255));
         btnJogar.setText("Jogar");
+        btnJogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJogarActionPerformed(evt);
+            }
+        });
 
         panBaixo.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -140,11 +150,20 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        mbLogin.setText("Login");
-        MenuBar.add(mbLogin);
+        mbLogin.setText("Contas");
 
-        mbRanking.setText("Ranking");
-        MenuBar.add(mbRanking);
+        jMenuItem1.setText("Login");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        mbLogin.add(jMenuItem1);
+
+        jMenuItem2.setText("Ranking");
+        mbLogin.add(jMenuItem2);
+
+        MenuBar.add(mbLogin);
 
         setJMenuBar(MenuBar);
 
@@ -162,6 +181,22 @@ public class Main extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSairActionPerformed
+
+    private void btnJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogarActionPerformed
+        new F1().setVisible(true);
+    }//GEN-LAST:event_btnJogarActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,10 +237,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuBar MenuBar;
     private javax.swing.JButton btnJogar;
     private javax.swing.JButton btnSair;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JLabel lblBlowfish;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JMenu mbLogin;
-    private javax.swing.JMenu mbRanking;
     private javax.swing.JPanel panBaixo;
     private javax.swing.JPanel panLateral;
     private javax.swing.JPanel panPrincipal;
