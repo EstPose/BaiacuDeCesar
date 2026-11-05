@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class F1 extends javax.swing.JFrame {
     String Resposta = "pão"; // Insira a resposta da fase aqui.
-    int ID = 1;
+    String User = "";
     
     public F1() {
         initComponents();
