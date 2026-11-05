@@ -11,7 +11,7 @@ import java.util.Vector;
  * @author estpose
  */
 
-class infos {
+public class infos {
     String nome;
     int nivel;
 }
