@@ -12,7 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class F1 extends javax.swing.JFrame {
     String Resposta = "pão"; // Insira a resposta da fase aqui.
-    String User = "";
+    int id = 0;
+    infos User = info.dados[id];
     
     public F1() {
         initComponents();
