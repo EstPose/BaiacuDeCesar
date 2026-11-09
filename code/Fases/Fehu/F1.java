@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package BaiacuDeCesar.code;
+package BaiacuDeCesar.code.Fases.Fehu;
 
+import BaiacuDeCesar.code.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,7 +14,7 @@ import javax.swing.JOptionPane;
 public class F1 extends javax.swing.JFrame {
     String Resposta = "pão"; // Insira a resposta da fase aqui.
     int id = 0;
-    infos User = info.dados[id];
+    jogador User = info.dados.get(id);
     
     public F1() {
         initComponents();

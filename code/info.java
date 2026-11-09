@@ -11,11 +11,11 @@ import java.util.Vector;
  * @author estpose
  */
 
-public class infos {
-    String nome;
-    int nivel;
-}
-
 public class info {
-    Vector<infos> dados = new Vector<>();
+
+    static public Vector<jogador> dados;
+
+    public info() {
+        this.dados = new Vector<>();
+    }
 }
