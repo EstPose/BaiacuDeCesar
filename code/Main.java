@@ -6,6 +6,7 @@ package BaiacuDeCesar.code;
 
 import BaiacuDeCesar.code.Fases.Fehu.F1;
 import static java.awt.Frame.MAXIMIZED_BOTH;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -188,7 +189,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogarActionPerformed
-        new F1().setVisible(true);
+        if (info.dados == null) {
+            JOptionPane.showMessageDialog(null, "Faça Login");
+        } else {
+            new F1().setVisible(true);
+        }
     }//GEN-LAST:event_btnJogarActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed

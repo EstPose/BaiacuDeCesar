@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class F1 extends javax.swing.JFrame {
     String Resposta = "pão"; // Insira a resposta da fase aqui.
-    int id = 0;
+    int id = info.select;
     jogador User = info.dados.get(id);
     
     public F1() {

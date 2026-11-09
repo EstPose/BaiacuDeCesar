@@ -14,6 +14,7 @@ import java.util.Vector;
 public class info {
 
     static public Vector<jogador> dados;
+    static public int select = 0;
 
     public info() {
         this.dados = new Vector<>();
