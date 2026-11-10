@@ -41,6 +41,7 @@ public class Main extends javax.swing.JFrame {
         panTopo = new javax.swing.JPanel();
         MenuBar = new javax.swing.JMenuBar();
         mbLogin = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
 
@@ -154,7 +155,10 @@ public class Main extends javax.swing.JFrame {
 
         mbLogin.setText("Contas");
 
-        jMenuItem1.setText("Login");
+        jMenuItem3.setText("Login");
+        mbLogin.add(jMenuItem3);
+
+        jMenuItem1.setText("Cadastros");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -201,7 +205,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        new Login().setVisible(true);
+        new Cadastros().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
@@ -245,6 +249,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnSair;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel lblBlowfish;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JMenu mbLogin;
