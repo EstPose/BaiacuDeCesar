@@ -73,6 +73,7 @@ public class Main extends javax.swing.JFrame {
         btnSair.setFont(new java.awt.Font("Liberation Serif", 0, 36)); // NOI18N
         btnSair.setForeground(new java.awt.Color(255, 255, 255));
         btnSair.setText("Sair");
+        btnSair.setFocusable(false);
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
@@ -83,6 +84,7 @@ public class Main extends javax.swing.JFrame {
         btnJogar.setFont(new java.awt.Font("Liberation Serif", 0, 36)); // NOI18N
         btnJogar.setForeground(new java.awt.Color(255, 255, 255));
         btnJogar.setText("Jogar");
+        btnJogar.setFocusable(false);
         btnJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnJogarActionPerformed(evt);
@@ -156,6 +158,11 @@ public class Main extends javax.swing.JFrame {
         mbLogin.setText("Contas");
 
         jMenuItem3.setText("Login");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         mbLogin.add(jMenuItem3);
 
         jMenuItem1.setText("Cadastros");
@@ -207,6 +214,10 @@ public class Main extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         new Cadastros().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
