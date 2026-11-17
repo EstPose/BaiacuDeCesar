@@ -4,7 +4,7 @@
  */
 package BaiacuDeCesar.code;
 
-import BaiacuDeCesar.code.Fases.Fehu.F1;
+//import BaiacuDeCesar.code.Fases.Fehu.F1;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import javax.swing.JOptionPane;
 
@@ -203,7 +203,7 @@ public class Main extends javax.swing.JFrame {
         if (info.dados == null) {
             JOptionPane.showMessageDialog(null, "Faça Login");
         } else {
-            new F1().setVisible(true);
+            //new F1().setVisible(true);
         }
     }//GEN-LAST:event_btnJogarActionPerformed
 
@@ -216,7 +216,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        new Login().setVisible(true);
+        String nome = JOptionPane.showInputDialog(null, "Digite Seu nome", "Login", JOptionPane.QUESTION_MESSAGE);
+        
+        jogador player = new jogador(nome, 0);
+        
+        info.dados.addElement(player);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**

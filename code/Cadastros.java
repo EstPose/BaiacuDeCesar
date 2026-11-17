@@ -20,6 +20,12 @@ public class Cadastros extends javax.swing.JDialog {
         dtContas.addColumn("NOME");
         dtContas.addColumn("Lvl");
         tblCadastros.setModel(dtContas);
+        
+        if (info.dados != null) {
+            for (jogador j : info.dados) {
+                dtContas.addRow(new Object[]{ j.nome, j.nivel });
+            }
+        }
     }
 
     /**
@@ -86,6 +92,7 @@ public class Cadastros extends javax.swing.JDialog {
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setFocusable(false);
 
         tblCadastros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

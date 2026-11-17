@@ -11,4 +11,9 @@ package BaiacuDeCesar.code;
 public class jogador {
     String nome;
     int nivel;
+    
+    public jogador (String nome, int nivel) {
+        this.nome = nome;
+        this.nivel = nivel;
+    }
 }
