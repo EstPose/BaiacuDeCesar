@@ -41,11 +41,12 @@ public class Main extends javax.swing.JFrame {
         panTopo = new javax.swing.JPanel();
         MenuBar = new javax.swing.JMenuBar();
         mbLogin = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menuLogin = new javax.swing.JMenuItem();
+        menuCadastros = new javax.swing.JMenuItem();
+        menuRanking = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Baiacu de Cesar");
 
         panPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -157,24 +158,24 @@ public class Main extends javax.swing.JFrame {
 
         mbLogin.setText("Contas");
 
-        jMenuItem3.setText("Login");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        menuLogin.setText("Login");
+        menuLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                menuLoginActionPerformed(evt);
             }
         });
-        mbLogin.add(jMenuItem3);
+        mbLogin.add(menuLogin);
 
-        jMenuItem1.setText("Cadastros");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        menuCadastros.setText("Cadastros");
+        menuCadastros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                menuCadastrosActionPerformed(evt);
             }
         });
-        mbLogin.add(jMenuItem1);
+        mbLogin.add(menuCadastros);
 
-        jMenuItem2.setText("Ranking");
-        mbLogin.add(jMenuItem2);
+        menuRanking.setText("Ranking");
+        mbLogin.add(menuRanking);
 
         MenuBar.add(mbLogin);
 
@@ -200,28 +201,38 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogarActionPerformed
-        if (info.dados == null) {
+        if (info.dados.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Faça Login");
         } else {
-            //new F1().setVisible(true);
+            JOptionPane.showMessageDialog(null, "Faça Login");
         }
     }//GEN-LAST:event_btnJogarActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void menuCadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastrosActionPerformed
         new Cadastros().setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_menuCadastrosActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void menuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLoginActionPerformed
         String nome = JOptionPane.showInputDialog(null, "Digite Seu nome", "Login", JOptionPane.QUESTION_MESSAGE);
+        try {
+            boolean validado = true;
+            for (jogador j : info.dados) {
+                if (j.nome.equals(nome)) {
+                    validado = false;
+                    JOptionPane.showMessageDialog(null, "Nome já existe!", "Erro", JOptionPane.ERROR_MESSAGE);
+                    break;
+                }
+            } 
+            if (!nome.isBlank() && validado) {
+                jogador player = new jogador(nome, 0);
+                info.dados.add(player);
+                info.select = info.dados.size() - 1;
+                JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (Exception e) {
+        }
         
-        jogador player = new jogador(nome, 0);
-        
-        info.dados.addElement(player);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_menuLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,12 +273,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuBar MenuBar;
     private javax.swing.JButton btnJogar;
     private javax.swing.JButton btnSair;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel lblBlowfish;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JMenu mbLogin;
+    private javax.swing.JMenuItem menuCadastros;
+    private javax.swing.JMenuItem menuLogin;
+    private javax.swing.JMenuItem menuRanking;
     private javax.swing.JPanel panBaixo;
     private javax.swing.JPanel panLateral;
     private javax.swing.JPanel panPrincipal;
