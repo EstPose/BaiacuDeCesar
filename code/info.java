@@ -4,7 +4,7 @@
  */
 package BaiacuDeCesar.code;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,7 +13,7 @@ import java.util.Vector;
 
 public class info {
 
-    static public Vector<jogador> dados = new Vector<>();
+    static public ArrayList<jogador> dados = new ArrayList<>();
     static public int select = 0;
 
 }

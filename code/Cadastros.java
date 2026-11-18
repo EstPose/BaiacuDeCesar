@@ -17,7 +17,12 @@ public class Cadastros extends javax.swing.JDialog {
     public Cadastros() {
         initComponents();
         setModal(true);
-        dtContas = new DefaultTableModel();
+        dtContas = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable (int row, int column) {
+                return false;
+            }
+        };
         dtContas.addColumn("NOME");
         dtContas.addColumn("Lvl");
         tblCadastros.setModel(dtContas);
@@ -92,6 +97,11 @@ public class Cadastros extends javax.swing.JDialog {
         btnDeletar.setForeground(new java.awt.Color(255, 255, 255));
         btnDeletar.setText("Deletar Conta");
         btnDeletar.setFocusable(false);
+        btnDeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeletarActionPerformed(evt);
+            }
+        });
 
         lblAtual.setFont(new java.awt.Font("Liberation Serif", 0, 14)); // NOI18N
         lblAtual.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,7 +122,15 @@ public class Cadastros extends javax.swing.JDialog {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tblCadastros);
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
@@ -168,8 +186,60 @@ public class Cadastros extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTrocarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrocarActionPerformed
-        JOptionPane.showInputDialog(null, "Digite o nome:", "Trocar Conta", JOptionPane.QUESTION_MESSAGE);
+        String troca = JOptionPane.showInputDialog(null, "Digite o nome:", "Trocar Conta", JOptionPane.QUESTION_MESSAGE);
+        try {
+            if (!troca.isBlank()) {
+                boolean sucesso = false;
+                for (int i = 0; i < info.dados.size(); i++) {
+                    if (troca.equals(info.dados.get(i).nome)) {
+                        sucesso = true;
+                        info.select = i;
+                        txtConta.setText(troca);
+                        JOptionPane.showMessageDialog(null, "Conta trocada para: "+troca, "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                        break;
+                    }
+                }
+                if (!sucesso) {
+                    JOptionPane.showMessageDialog(null, "Conta não existe!", "Erro", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        } catch (Exception e) {}
     }//GEN-LAST:event_btnTrocarActionPerformed
+
+    private void btnDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarActionPerformed
+        String delete = JOptionPane.showInputDialog(null, "Digite o nome:", "Deletar Conta", JOptionPane.QUESTION_MESSAGE);
+        try {
+            if (!delete.isBlank()) {
+                boolean sucesso = false;
+                for (int i = 0; i < info.dados.size(); i++) {
+                    if (delete.equals(info.dados.get(i).nome)) {
+                        sucesso = true;
+                        int confirm = 1;
+                        confirm = JOptionPane.showConfirmDialog(null, "Tem certeza que quer deletar "+delete, "Confirme", JOptionPane.YES_NO_OPTION);
+                        if (confirm == 0) {
+                            info.dados.remove(i);
+                            if (info.dados.isEmpty()) {
+                                txtConta.setText("");
+                                dtContas.setRowCount(0);
+                            } else {
+                                dtContas.removeRow(i);
+                            }
+                            if (info.select == i) {
+                                info.select = 0;
+                                txtConta.setText(info.dados.get(0).nome);
+                            } else if (info.select > i) {
+                                info.select -= 1;
+                            }
+                            
+                        }
+                    }
+                }
+                if (!sucesso) {
+                    JOptionPane.showMessageDialog(null, "Conta não existe!", "Erro", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        } catch (Exception e) {}
+    }//GEN-LAST:event_btnDeletarActionPerformed
 
     /**
      * @param args the command line arguments

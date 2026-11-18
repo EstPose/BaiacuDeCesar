@@ -204,7 +204,7 @@ public class Main extends javax.swing.JFrame {
         if (info.dados.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Faça Login");
         } else {
-            JOptionPane.showMessageDialog(null, "Faça Login");
+            JOptionPane.showMessageDialog(null, info.dados.get(info.select).nome);
         }
     }//GEN-LAST:event_btnJogarActionPerformed
 
