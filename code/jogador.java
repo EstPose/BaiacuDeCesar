@@ -9,8 +9,8 @@ package BaiacuDeCesar.code;
  * @author Aluno
  */
 public class jogador {
-    String nome;
-    int nivel;
+    public String nome;
+    public int nivel;
     
     public jogador (String nome, int nivel) {
         this.nome = nome;
