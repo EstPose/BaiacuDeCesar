@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package BaiacuDeCesar.code.Fases;
+package BaiacuDeCesar.code.Fases.Uruz;
 
 import BaiacuDeCesar.code.info;
 import javax.swing.JOptionPane;
@@ -11,14 +11,14 @@ import javax.swing.JOptionPane;
  *
  * @author estpose
  */
-public class modelo extends javax.swing.JFrame {
+public class U2 extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(modelo.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(U2.class.getName());
 
     /**
      * Creates new form modelo
      */
-    public modelo() {
+    public U2() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         
@@ -227,7 +227,7 @@ public class modelo extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new modelo().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new U2().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
