@@ -5,6 +5,7 @@
 package BaiacuDeCesar.code.Fases.Thurisaz;
 
 import BaiacuDeCesar.code.info;
+import BaiacuDeCesar.code.iniciar;
 import javax.swing.JOptionPane;
 
 /**
@@ -43,10 +44,11 @@ public class T4 extends javax.swing.JFrame {
         panMiniE = new javax.swing.JPanel();
         PanMiniD = new javax.swing.JPanel();
         btnConfirmar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Modelo");
+        setTitle("Thurisaz 4");
 
         panPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -80,11 +82,11 @@ public class T4 extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Liberation Serif", 3, 48)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Título");
+        lblTitulo.setText("Thurisaz 4");
 
         lblEnigma.setBackground(new java.awt.Color(0, 0, 0));
         lblEnigma.setForeground(new java.awt.Color(255, 255, 255));
-        lblEnigma.setText("Enigma");
+        lblEnigma.setText("Perdida no tempo?");
 
         lblResposta.setBackground(new java.awt.Color(0, 0, 0));
         lblResposta.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,8 +126,13 @@ public class T4 extends javax.swing.JFrame {
         btnConfirmar.setText("Confirmar");
         btnConfirmar.addActionListener(this::btnConfirmarActionPerformed);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/Mineração.png"))); // NOI18N
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setColumns(20);
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setRows(5);
+        jTextArea1.setText("https://estpose.github.io/Thurisaz/");
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);
@@ -149,7 +156,7 @@ public class T4 extends javax.swing.JFrame {
                             .addComponent(lblEnigma)
                             .addComponent(lblResposta))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
                 .addGap(18, 18, 18)
                 .addComponent(panDireita, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -164,7 +171,7 @@ public class T4 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(lblEnigma)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblResposta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -194,11 +201,11 @@ public class T4 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        String resposta = "comunismo";
+        String resposta = "pareidolia";
         String tentativa = txtResposta.getText();
         if (resposta.equals(tentativa)) {
-            JOptionPane.showMessageDialog(null, resposta);
             info.dados.get(info.select).nivel += 1;
+            iniciar.iniciar();
             dispose();
         } else {
             JOptionPane.showMessageDialog(null, "Errado");
@@ -233,7 +240,8 @@ public class T4 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanMiniD;
     private javax.swing.JButton btnConfirmar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblEnigma;
     private javax.swing.JLabel lblResposta;
     private javax.swing.JLabel lblTitulo;

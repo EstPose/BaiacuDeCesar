@@ -5,6 +5,7 @@
 package BaiacuDeCesar.code.Fases.Thurisaz;
 
 import BaiacuDeCesar.code.info;
+import BaiacuDeCesar.code.iniciar;
 import javax.swing.JOptionPane;
 
 /**
@@ -47,7 +48,7 @@ public class T2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Modelo");
+        setTitle("Thurisaz 2");
 
         panPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -57,7 +58,7 @@ public class T2 extends javax.swing.JFrame {
         panEsquerda.setLayout(panEsquerdaLayout);
         panEsquerdaLayout.setHorizontalGroup(
             panEsquerdaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 121, Short.MAX_VALUE)
+            .addGap(0, 107, Short.MAX_VALUE)
         );
         panEsquerdaLayout.setVerticalGroup(
             panEsquerdaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,7 +71,7 @@ public class T2 extends javax.swing.JFrame {
         panDireita.setLayout(panDireitaLayout);
         panDireitaLayout.setHorizontalGroup(
             panDireitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 122, Short.MAX_VALUE)
+            .addGap(0, 108, Short.MAX_VALUE)
         );
         panDireitaLayout.setVerticalGroup(
             panDireitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,11 +82,11 @@ public class T2 extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Liberation Serif", 3, 48)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Título");
+        lblTitulo.setText("Thurisaz 2");
 
         lblEnigma.setBackground(new java.awt.Color(0, 0, 0));
         lblEnigma.setForeground(new java.awt.Color(255, 255, 255));
-        lblEnigma.setText("Enigma");
+        lblEnigma.setText("Cadê o Primeiro Ministro?");
 
         lblResposta.setBackground(new java.awt.Color(0, 0, 0));
         lblResposta.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,7 +127,8 @@ public class T2 extends javax.swing.JFrame {
         btnConfirmar.addActionListener(this::btnConfirmarActionPerformed);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/Mineração.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/australia.jpg"))); // NOI18N
+        jLabel1.setToolTipText("Blowfish");
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);
@@ -142,7 +144,7 @@ public class T2 extends javax.swing.JFrame {
                     .addGroup(panPrincipalLayout.createSequentialGroup()
                         .addComponent(panMiniE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnConfirmar, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                        .addComponent(btnConfirmar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(PanMiniD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panPrincipalLayout.createSequentialGroup()
@@ -165,7 +167,7 @@ public class T2 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(lblEnigma)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblResposta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -195,11 +197,11 @@ public class T2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        String resposta = "comunismo";
+        String resposta = "cheviotbeach";
         String tentativa = txtResposta.getText();
         if (resposta.equals(tentativa)) {
-            JOptionPane.showMessageDialog(null, resposta);
             info.dados.get(info.select).nivel += 1;
+            iniciar.iniciar();
             dispose();
         } else {
             JOptionPane.showMessageDialog(null, "Errado");
