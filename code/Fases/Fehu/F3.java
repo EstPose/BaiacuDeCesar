@@ -125,7 +125,6 @@ public class F3 extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("↑?↑");
-        jLabel1.setToolTipText("");
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);

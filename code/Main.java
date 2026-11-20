@@ -151,7 +151,7 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panBaixo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(panBaixo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(panLateral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -175,6 +175,11 @@ public class Main extends javax.swing.JFrame {
         mbLogin.add(menuCadastros);
 
         menuRanking.setText("Ranking");
+        menuRanking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuRankingActionPerformed(evt);
+            }
+        });
         mbLogin.add(menuRanking);
 
         MenuBar.add(mbLogin);
@@ -233,6 +238,10 @@ public class Main extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_menuLoginActionPerformed
+
+    private void menuRankingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRankingActionPerformed
+        new Ranking().setVisible(true);
+    }//GEN-LAST:event_menuRankingActionPerformed
 
     /**
      * @param args the command line arguments
