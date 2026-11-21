@@ -86,6 +86,7 @@ public class iniciar {
                 break;
                 
             case 17:
+                new Final().setVisible(true);
                 break;
             default:
                 throw new AssertionError();
