@@ -251,7 +251,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/BaiacuDeCesar/images/australia.jpg"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Blowfish"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
       </SubComponents>

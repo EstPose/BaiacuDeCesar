@@ -83,7 +83,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="lblEnigma" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel1" pref="242" max="32767" attributes="0"/>
+                          <Component id="jLabel1" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblResposta" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -156,7 +156,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="T&#xed;tulo"/>
+            <Property name="text" type="java.lang.String" value="Ansuz 1"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblEnigma">
@@ -167,7 +167,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Enigma"/>
+            <Property name="text" type="java.lang.String" value="Sinestesia."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblResposta">
@@ -249,7 +249,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/BaiacuDeCesar/images/Minera&#xe7;&#xe3;o.png"/>
+              <Image iconType="3" name="/BaiacuDeCesar/images/qr.jpg"/>
             </Property>
           </Properties>
         </Component>

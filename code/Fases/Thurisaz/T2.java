@@ -128,7 +128,7 @@ public class T2 extends javax.swing.JFrame {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/australia.jpg"))); // NOI18N
-        jLabel1.setToolTipText("Blowfish");
+        jLabel1.setToolTipText("");
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);

@@ -5,6 +5,7 @@
 package BaiacuDeCesar.code.Fases.Ansuz;
 
 import BaiacuDeCesar.code.info;
+import BaiacuDeCesar.code.iniciar;
 import javax.swing.JOptionPane;
 
 /**
@@ -46,7 +47,7 @@ public class A2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Modelo");
+        setTitle("Ansuz 2");
 
         panPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -80,11 +81,13 @@ public class A2 extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Liberation Serif", 3, 48)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Título");
+        lblTitulo.setText("Ansuz 2");
+        lblTitulo.setToolTipText("U+1F511");
 
         lblEnigma.setBackground(new java.awt.Color(0, 0, 0));
         lblEnigma.setForeground(new java.awt.Color(255, 255, 255));
-        lblEnigma.setText("Enigma");
+        lblEnigma.setText("gLXg3DpV75sXgEU2bjf9fw== + enigma14");
+        lblEnigma.setToolTipText("B64 + IV");
 
         lblResposta.setBackground(new java.awt.Color(0, 0, 0));
         lblResposta.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,7 +128,8 @@ public class A2 extends javax.swing.JFrame {
         btnConfirmar.addActionListener(this::btnConfirmarActionPerformed);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/Mineração.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BaiacuDeCesar/images/caiabu.jpg"))); // NOI18N
+        jLabel1.setToolTipText("blowfish");
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);
@@ -164,7 +168,7 @@ public class A2 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(lblEnigma)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblResposta)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -194,11 +198,11 @@ public class A2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        String resposta = "comunismo";
+        String resposta = "soberania";
         String tentativa = txtResposta.getText();
         if (resposta.equals(tentativa)) {
-            JOptionPane.showMessageDialog(null, resposta);
             info.dados.get(info.select).nivel += 1;
+            iniciar.iniciar();
             dispose();
         } else {
             JOptionPane.showMessageDialog(null, "Errado");
