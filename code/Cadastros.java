@@ -23,8 +23,8 @@ public class Cadastros extends javax.swing.JDialog {
                 return false;
             }
         };
-        dtContas.addColumn("NOME");
-        dtContas.addColumn("Lvl");
+        dtContas.addColumn("Nome");
+        dtContas.addColumn("Nivel");
         tblCadastros.setModel(dtContas);
         
         if (!info.dados.isEmpty()) {
