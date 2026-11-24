@@ -86,7 +86,7 @@ public class A2 extends javax.swing.JFrame {
 
         lblEnigma.setBackground(new java.awt.Color(0, 0, 0));
         lblEnigma.setForeground(new java.awt.Color(255, 255, 255));
-        lblEnigma.setText("gLXg3DpV75sXgEU2bjf9fw== + enigma14");
+        lblEnigma.setText("GyqhmHvs+JbrI7TxvrytvQ== + enigma14");
         lblEnigma.setToolTipText("B64 + IV");
 
         lblResposta.setBackground(new java.awt.Color(0, 0, 0));
