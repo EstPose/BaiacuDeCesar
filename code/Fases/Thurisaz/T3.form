@@ -156,7 +156,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="T&#xed;tulo"/>
+            <Property name="text" type="java.lang.String" value="Thurisaz 3"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblEnigma">

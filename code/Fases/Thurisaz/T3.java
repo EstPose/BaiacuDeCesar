@@ -81,7 +81,7 @@ public class T3 extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Liberation Serif", 3, 48)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Título");
+        lblTitulo.setText("Thurisaz 3");
 
         lblEnigma.setBackground(new java.awt.Color(0, 0, 0));
         lblEnigma.setForeground(new java.awt.Color(255, 255, 255));
